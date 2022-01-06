@@ -72,7 +72,9 @@ else:
 slova_text = []
 
 for slovo in TEXTS[int(cislo_textu)-1].split():
-    slova_text.append(slovo.strip(",:;."))
+    ciste_slovo = slovo.strip(",:;.")
+    if len(ciste_slovo) > 0:
+        slova_text.append(ciste_slovo)
 
 pocet_slov = len(slova_text)
 
